@@ -1,0 +1,30 @@
+// Variables
+$rootFontSize: 16px;
+
+$primaryBackgroundColor: #000000;
+$textColor: #F5F5F5;
+$fontFamily: 'PT Serif', serif;
+
+
+// Functions
+@function rem($pxValue) {
+  @return unquote(($pxValue / $rootFontSize) + 'rem');
+}
+
+@mixin large {
+  @media screen and (max-width: #{rem(1681px)}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (max-width: #{rem(1024px)}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: #{rem(768px)}) {
+    @content;
+  }
+}

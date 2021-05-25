@@ -1,0 +1,32 @@
+@import '../../styles/utils';
+
+.header {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: space-between;
+  width: 100vw;
+  z-index: 9;
+  margin: 0 auto;
+  padding: 3rem;
+  font-family: $fontFamily;
+  color: $textColor;
+
+  @include medium {
+    padding: 2rem;
+  }
+}
+.link {
+  font-family: $fontFamily;
+  font-size: 1rem;
+  font-weight: lighter;
+  color: $textColor;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  a {
+    cursor: pointer;
+  }
+}
