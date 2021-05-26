@@ -1,6 +1,6 @@
-# Personal portfolio
+# Photography portfolio
 
-Personal digital space that represents my work and values.
+Portfolio presenting work of a talented photographer Samira Shaterian.
 
 ## Getting Started
 
