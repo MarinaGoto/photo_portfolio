@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import React, { useState } from 'react';
 import styles from "./header.module.scss"
+import logo from "../../images/logo.svg";
 
 const menu = [
   {item: "performance"},
@@ -11,7 +12,7 @@ const menu = [
 
 
 const Header = () => {
-      const [clikedItem, setClickedItem] = useState(0);
+      const [clickedItem, setClickedItem] = useState(0);
 return (
    <header className={styles.header}>
         <h1 style={{ margin: 0 }}>
@@ -22,7 +23,11 @@ return (
               textDecoration: `none`,
             }}
           >
-            samira
+            <div
+              style={{backgroundImage: `url("${logo}")`}}
+              className={styles.logo}
+              title={`Logo`}
+            />
           </Link>
         </h1>
         <div className={styles.menu}>
@@ -30,7 +35,8 @@ return (
             <a onClick={() => setClickedItem(index)}>{el.item}</a>
           ))}
         </div>
-   </header>    )
+   </header>
+)
 
 }
 

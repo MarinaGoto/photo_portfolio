@@ -5,6 +5,10 @@
   "version": "0.1.0",
   "author": "Marina Gotovkina @marinagoto",
   "dependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.6.1",
+    "@types/react": "^17.0.8",
+    "@types/react-dom": "^17.0.5",
     "css-loader": "^5.2.4",
     "foundation-sites": "^6.6.3",
     "gatsby": "^2.32.3",
@@ -39,7 +43,7 @@
   },
   "devDependencies": {
     "prettier": "2.0.4",
-    "typescript": "^3.7.5"
+    "typescript": "^4.3.2"
   },
   "keywords": [
     "gatsby"

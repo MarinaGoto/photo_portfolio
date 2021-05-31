@@ -8,13 +8,20 @@
   width: 100vw;
   z-index: 9;
   margin: 0 auto;
-  padding: 3rem;
+  padding: 1rem 2rem;
   font-family: $fontFamily;
   color: $textColor;
 
   @include medium {
     padding: 2rem;
   }
+}
+.logo {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  min-height: 100px;
+  width: 150px;
 }
 .link {
   font-family: $fontFamily;
@@ -25,8 +32,14 @@
 
 .menu {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
+  align-items: center;
   a {
+    padding-left: 2rem;
     cursor: pointer;
+    opacity: 0.8;
+  }
+  a:hover {
+    opacity: 1;
   }
 }
