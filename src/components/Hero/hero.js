@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { useWindowWidth } from '@react-hook/window-size';
 import styles from './hero.module.scss';
 import { graphql, useStaticQuery } from 'gatsby';
@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from 'styled-components'
 import Header from '../Header/header';
+import self from '../../images/samira.png';
 
 
 const SliderWrap = styled.div`
@@ -20,7 +21,7 @@ const SliderWrap = styled.div`
        justify-content: center;
     }
     .slick-dots li {
-       min-width: 10vw;
+       width: 150px; 
        margin: 0;
        opacity: 0.5;
     }
@@ -48,7 +49,7 @@ const dataQuery = graphql`
           title
           image {
             childImageSharp {
-              fluid(maxWidth: 2560, quality: 90) {
+              fluid(maxWidth: 1000, quality: 90) {
                 ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
@@ -60,7 +61,8 @@ const dataQuery = graphql`
 `;
 
 const Hero = ()  => {
-    const data = useStaticQuery(dataQuery);
+  const [clickedItem, setClickedItem] = useState("performance");
+  const data = useStaticQuery(dataQuery);
     const windowWidth = useWindowWidth();
     const isOnSmallerDevice = windowWidth <= 768;
     const imageStyle = isOnSmallerDevice ? { height: '75vh' } : { maxHeight: '100vh' };
@@ -101,18 +103,40 @@ const Hero = ()  => {
       slidesToShow: 1,
       slidesToScroll: 1,
     };
+
     return (
       <div className={styles.root}>
-        <Header/>
+        <Header setClickedItem={setClickedItem}/>
+        {clickedItem === "performance" &&
         <SliderWrap>
-        <Slider {...settings}>
-          {items.map((el, index) => (
-            <div key={index}>
-            {el.image}
-            </div>
-          ))}
-        </Slider>
+          <Slider {...settings}>
+            {items.map((el, index) => (
+              <div key={index}>
+                {el.image}
+              </div>
+            ))}
+          </Slider>
         </SliderWrap>
+        }
+        {clickedItem === "story" &&
+        <div className={styles.wrapper}>
+          <img className={styles.item} src={self}/>
+          <p className={styles.item}>
+            Samira was born in 1985, in Tehran. She did her bachelor's at the "Art University" of Tehran. If her major was sculpture, she had a good chance to experiment with a wide range of materials to work with. As you may know, sculpturists work with their hands and it is vital to touch the material with fingers. It gives them the feeling of being the creator of the artwork.
+          </p>
+        </div>
+        }
+        {clickedItem === "contact" &&
+        <div className={styles.contact}>
+          <p>
+            <a href="mailto:samira.shaterian@gmail.com ">samira.shaterian@gmail.com</a>
+          </p>
+          <p>
+            <a href="tel:+4799999919">+4799999919</a>
+          </p>
+          <p>Oslo, Norway</p>
+        </div>
+        }
       </div>
     );
 };

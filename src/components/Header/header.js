@@ -11,8 +11,7 @@ const menu = [
 ];
 
 
-const Header = () => {
-      const [clickedItem, setClickedItem] = useState(0);
+const Header = ({setClickedItem}) => {
 return (
    <header className={styles.header}>
         <h1 style={{ margin: 0 }}>
@@ -32,7 +31,7 @@ return (
         </h1>
         <div className={styles.menu}>
           {menu.map((el, index) => (
-            <a onClick={() => setClickedItem(index)}>{el.item}</a>
+            <a onClick={() => setClickedItem(el.item)}>{el.item}</a>
           ))}
         </div>
    </header>

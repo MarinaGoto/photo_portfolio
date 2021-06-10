@@ -10,3 +10,21 @@
     max-height: 100%;
   }
 }
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10rem 2rem;
+  .item {
+    padding: 2rem;
+    flex: 1;
+  }
+}
+
+.contact {
+  padding: 10rem 2rem;
+  a {
+    color: gray;
+  }
+}
