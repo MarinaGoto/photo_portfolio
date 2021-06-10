@@ -15,7 +15,7 @@ const SliderWrap = styled.div`
        min-height: 70px;
        overflow-x: scroll;
        overflow-y: hidden;
-       bottom: 50px;
+       bottom: 0;
        display: flex !important;  
        justify-content: center;
     }
@@ -93,7 +93,6 @@ const Hero = ()  => {
           </div>
         );
       },
-      autoplay: true,
       dots: true,
       arrows: false,
       dotsClass: "slick-dots",
