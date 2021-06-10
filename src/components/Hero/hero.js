@@ -12,10 +12,12 @@ import Header from '../Header/header';
 
 const SliderWrap = styled.div`
     .slick-dots {
-       display: flex;
+       min-height: 70px;
+       overflow-x: scroll;
+       overflow-y: hidden;
+       bottom: 50px;
+       display: flex !important;  
        justify-content: center;
-       background-color: white;
-       height: 10vh;      
     }
     .slick-dots li {
        min-width: 10vw;
@@ -86,17 +88,19 @@ const Hero = ()  => {
     const settings = {
       customPaging: function(i) {
         return (
-          <div>
+          <div className={styles.paging}>
             {items[i].image}
           </div>
         );
       },
+      autoplay: true,
       dots: true,
-      dotsClass: "slick-dots slick-thumb",
+      arrows: false,
+      dotsClass: "slick-dots",
       infinite: true,
       speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
     };
     return (
       <div className={styles.root}>
