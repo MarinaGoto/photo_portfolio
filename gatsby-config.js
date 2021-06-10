@@ -8,7 +8,9 @@ module.exports = {
     image: "/1.jpg",
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-plugin-sass`,
       options: {
@@ -20,6 +22,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,8 +30,13 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'data',
+        path: `${__dirname}/src/data`
+      }
+    },
     `gatsby-plugin-typescript`,
     {
       resolve: `gatsby-plugin-force-file-loader`,

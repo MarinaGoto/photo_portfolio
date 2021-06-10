@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
+import { useWindowWidth } from '@react-hook/window-size';
 import styles from './hero.module.scss';
-import img_1 from "../../images/performance/1.jpg";
-import img_2 from "../../images/performance/2.jpg";
-import img_3 from "../../images/performance/3.jpg";
-import img_4 from "../../images/performance/4.jpg";
-import img_5 from "../../images/performance/5.jpg";
-import img_6 from "../../images/performance/6.jpg";
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from 'styled-components'
 import Header from '../Header/header';
+
 
 const SliderWrap = styled.div`
     .slick-dots {
@@ -40,31 +38,57 @@ const SliderWrap = styled.div`
      }  
 `;
 
-const images = [
-  {image: img_1},
-  {image: img_3},
-  {image: img_5},
-  {image: img_2},
-  {image: img_6},
-  {image: img_4},
-  {image: img_1},
-  {image: img_3},
-  {image: img_5},
-  {image: img_2},
-];
+const dataQuery = graphql`
+  query imageData {
+    allPerformanceImagesJson {
+      edges {
+        node {
+          title
+          image {
+            childImageSharp {
+              fluid(maxWidth: 2560, quality: 90) {
+                ...GatsbyImageSharpFluid_withWebp_noBase64
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
+const Hero = ()  => {
+    const data = useStaticQuery(dataQuery);
+    const windowWidth = useWindowWidth();
+    const isOnSmallerDevice = windowWidth <= 768;
+    const imageStyle = isOnSmallerDevice ? { height: '75vh' } : { maxHeight: '100vh' };
 
-class Hero extends Component {
-  render() {
+    const items = data.allPerformanceImagesJson.edges
+      .filter(item => {
+        return item;
+      })
+      .map(item => {
+        const sources = [
+          item.node.image.childImageSharp.fluid,
+        ];
+        return {
+          name: item.node.title,
+          image: (
+            <Img
+              style={imageStyle}
+              loading='eager'
+              fluid={sources}
+            />
+          ),
+        };
+      });
+
     const settings = {
       customPaging: function(i) {
         return (
-          <a>
-            <div
-              style={{backgroundImage: `url("${images[i] && images[i].image}")`}}
-              className={styles.paddingImg}
-            />
-          </a>
+          <div>
+            {items[i].image}
+          </div>
         );
       },
       dots: true,
@@ -79,22 +103,16 @@ class Hero extends Component {
         <Header/>
         <SliderWrap>
         <Slider {...settings}>
-          {images.map((el, index) => (
+          {items.map((el, index) => (
             <div key={index}>
-              <div
-                key={index}
-                style={{backgroundImage: `url("${el.image}")`}}
-                className={styles.image}
-                title={`Slide ${index + 1}`}
-              />
+            {el.image}
             </div>
           ))}
         </Slider>
         </SliderWrap>
       </div>
     );
-  }
-}
+};
 
 
 export default Hero
