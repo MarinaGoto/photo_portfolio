@@ -12,6 +12,9 @@ import self from '../../images/samira.png';
 
 
 const SliderWrap = styled.div`
+    .slick-list {
+       height: 100vh;
+    }    
     .slick-dots {
        min-height: 70px;
        overflow-x: scroll;
