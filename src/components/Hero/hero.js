@@ -82,6 +82,7 @@ const Hero = ()  => {
           name: item.node.title,
           image: (
             <Img
+              imgStyle={{height: "100%"}}
               style={imageStyle}
               loading='eager'
               fluid={sources}
