@@ -16,7 +16,7 @@ const SliderWrap = styled.div`
        height: 100vh;
     }    
     .slick-dots {
-       min-height: 70px;
+       height: 70px;
        overflow-x: scroll;
        overflow-y: hidden;
        bottom: 0;
@@ -24,7 +24,8 @@ const SliderWrap = styled.div`
        justify-content: center;
     }
     .slick-dots li {
-       width: 150px; 
+       height: 100%; 
+       width: 100px; 
        margin: 0;
        opacity: 0.5;
     }
@@ -83,7 +84,6 @@ const Hero = ()  => {
           image: (
             <Img
               imgStyle={{height: "100%"}}
-              style={imageStyle}
               loading='eager'
               fluid={sources}
             />
@@ -106,6 +106,7 @@ const Hero = ()  => {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      fade: true,
     };
 
     return (
@@ -124,7 +125,7 @@ const Hero = ()  => {
         }
         {clickedItem === "story" &&
         <div className={styles.wrapper}>
-          <img className={styles.item} src={self}/>
+          <img alt={"Samira photo"} className={styles.item} src={self}/>
           <p className={styles.item}>
             Samira was born in 1985, in Tehran. She did her bachelor's at the "Art University" of Tehran. If her major was sculpture, she had a good chance to experiment with a wide range of materials to work with. As you may know, sculpturists work with their hands and it is vital to touch the material with fingers. It gives them the feeling of being the creator of the artwork.
           </p>
