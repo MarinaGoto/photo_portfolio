@@ -108,7 +108,7 @@ const Hero = ()  => {
       <div className={styles.root}>
         <Header setClickedItem={setClickedItem}/>
         {clickedItem === "performance" &&
-        <SliderWrap>
+        <SliderWrap className={styles.sliderWrap}>
           <Slider {...settings}>
             {items.map((el, index) => (
               <div key={index}>

@@ -1,6 +1,14 @@
+@import '../../styles/utils';
+
 .root {
   max-height: 100vh;
+  height: 100vh;
+}
+
+.sliderWrap {
+  min-height: 100vh;
   overflow: hidden;
+
 }
 
 .paging {
@@ -17,8 +25,15 @@
   justify-content: space-between;
   padding: 10rem 2rem;
   .item {
+    width: 50%;
     padding: 2rem;
-    flex: 1;
+  }
+  @include small {
+    flex-direction: column;
+
+    .item {
+      width: unset;
+    }
   }
 }
 
