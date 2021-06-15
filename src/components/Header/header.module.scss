@@ -12,13 +12,8 @@
   font-family: $fontFamily;
   color: $textColor;
 
-  @include medium {
-    padding: 2rem;
-  }
   @include small {
-    display: flex;
-    padding: 0;
-    width: 100%;
+    padding: 50px;
   }
 }
 .logo {

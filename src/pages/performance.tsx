@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import { graphql, useStaticQuery } from 'gatsby';
 import { useWindowWidth } from '@react-hook/window-size';
 import Img from 'gatsby-image';
-
+import styles from "./index.module.scss"
 
 const dataQuery = graphql`
   query performanceImageData {
@@ -59,7 +59,7 @@ const Performance = () => {
         description={"Samira is a photographer based in Oslo."}
       />
       {items.map((el, index) => (
-        <div key={index}>
+        <div className={styles.perfImage} key={index}>
           {el.image}
         </div>
       ))}

@@ -2,8 +2,15 @@
 
 .portrait {
   padding: 150px;
+  @include small {
+    padding: 50px;
+  }
+}
+
+
+.perfImage {
   @include medium {
-    padding: 0;
+    padding: 100px 0;
   }
 }
 
@@ -17,6 +24,10 @@
   .item {
     max-width: 45%;
   }
+  img {
+    object-fit: contain;
+  }
+
 
   @include medium {
     flex-direction: column;
