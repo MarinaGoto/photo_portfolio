@@ -9,7 +9,9 @@
 
 
 .story {
-  padding: 150px;
+  padding-top: 300px;
+  max-width: 80%;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   .item {
@@ -26,7 +28,9 @@
 }
 
 .contact {
-  padding: 300px 150px;
+  padding-top: 300px;
+  max-width: 80%;
+  margin: auto;
   text-align: center;
 
   a {
