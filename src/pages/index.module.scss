@@ -1,0 +1,41 @@
+@import '../styles/utils';
+
+.portrait {
+  padding: 150px;
+  @include medium {
+    padding: 0;
+  }
+}
+
+
+.story {
+  padding: 150px;
+  display: flex;
+  justify-content: space-between;
+  .item {
+    max-width: 45%;
+  }
+
+  @include medium {
+    flex-direction: column;
+
+    .item {
+      max-width: unset;
+    }
+  }
+}
+
+.contact {
+  padding: 300px 150px;
+  text-align: center;
+
+  a {
+    color: gray;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+

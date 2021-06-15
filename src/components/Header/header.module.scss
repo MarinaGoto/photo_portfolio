@@ -15,13 +15,18 @@
   @include medium {
     padding: 2rem;
   }
+  @include small {
+    display: flex;
+    padding: 0;
+    width: 100%;
+  }
 }
 .logo {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
   min-height: 100px;
-  width: 150px;
+  width: 200px;
 }
 .link {
   font-family: $fontFamily;
@@ -35,11 +40,20 @@
   justify-content: flex-end;
   align-items: center;
   a {
+    color: gray;
+    text-decoration: none;
     padding-left: 2rem;
     cursor: pointer;
     opacity: 0.8;
   }
   a:hover {
     opacity: 1;
+  }
+
+  @include small {
+    padding-top: 40px;
+    padding-right: 20px;
+    flex-direction: column;
+    align-items: flex-end;
   }
 }

@@ -1,45 +1,7 @@
 @import '../../styles/utils';
 
-.root {
-  max-height: 100vh;
-  height: 100vh;
-}
-
 .sliderWrap {
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 100vh;
   overflow: hidden;
-
-}
-
-.paging {
-  overflow-y: hidden;
-  img {
-    height: 60px !important;
-    max-height: 100%;
-  }
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10rem 2rem;
-  .item {
-    width: 50%;
-    padding: 2rem;
-  }
-  @include small {
-    flex-direction: column;
-
-    .item {
-      width: unset;
-    }
-  }
-}
-
-.contact {
-  padding: 10rem 2rem;
-  a {
-    color: gray;
-  }
 }
