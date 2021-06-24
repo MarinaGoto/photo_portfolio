@@ -5,6 +5,29 @@ import Img from 'gatsby-image';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import styled from 'styled-components'
+
+const SliderWrap = styled.div`
+    .slick-dots {
+       height: 70px;
+       overflow-x: scroll;
+       overflow-y: hidden;
+       display: flex !important;  
+       justify-content: center;
+    }
+    .slick-dots li {
+       width: 150px; 
+       margin: 0;
+       opacity: 0.5;
+    }
+    .slick-dots{
+      .slick-active {
+       opacity: 1;
+    }}
+    .slick-arrow {
+      z-index: 99;
+     }  
+`;
 
 const dataQuery = graphql`
   query imageData {
@@ -49,10 +72,17 @@ const Hero = ()  => {
       });
 
     const settings = {
-      autoplaySpeed: 2000,
-      autoplay: true,
+      customPaging: function(i) {
+        return (
+          <div className={styles.paging}>
+            {items[i].image}
+          </div>
+        );
+      },
+      //autoplaySpeed: 2000,
+      //autoplay: true,
       dots: true,
-      arrows: false,
+      arrows: true,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
@@ -61,15 +91,15 @@ const Hero = ()  => {
     };
 
     return (
-        <div className={styles.sliderWrap}>
-          <Slider {...settings}>
-            {items.map((el, index) => (
-              <div key={index}>
-                {el.image}
-              </div>
-            ))}
-          </Slider>
-        </div>
+          <SliderWrap className={styles.sliderWrap}>
+            <Slider {...settings}>
+              {items.map((el, index) => (
+                <div key={index}>
+                  {el.image}
+                </div>
+              ))}
+            </Slider>
+          </SliderWrap>
     );
 };
 
