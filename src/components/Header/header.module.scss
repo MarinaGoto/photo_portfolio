@@ -8,7 +8,7 @@
   width: 100vw;
   z-index: 9;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 1rem 5rem;
   font-family: $fontFamily;
   color: $textColor;
 
@@ -20,8 +20,8 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  min-height: 100px;
-  width: 200px;
+  min-height: 120px;
+  width: 220px;
 }
 .link {
   font-family: $fontFamily;
