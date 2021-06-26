@@ -1,20 +1,12 @@
 @import '../../styles/utils';
 
-.root {
-  max-height: 100vh;
-  height: 100vh;
-}
-
 .sliderWrap {
-  padding: 5rem;
-  overflow: hidden;
-
+  padding: 7rem 20% 0 20%;
 
   @include small {
-    padding: 30vh 0 0 0;
+    padding: 10rem 0;
   }
 }
-
 .paging {
   overflow-y: hidden;
 }

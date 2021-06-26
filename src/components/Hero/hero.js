@@ -9,22 +9,19 @@ import styled from 'styled-components'
 
 const SliderWrap = styled.div`
     .slick-dots {
-       height: 70px;
-       overflow-x: scroll;
-       overflow-y: hidden;
-       display: flex !important;  
-       justify-content: center;
-    }
+      display: flex !important;  
+      justify-content: center;
+     }
     .slick-dots li {
-       width: 150px; 
-       margin: 0;
-       opacity: 0.5;
+      width: 150px; 
+      opacity: 0.5;
     }
     .slick-dots{
       .slick-active {
        opacity: 1;
     }}
     .slick-arrow {
+      width: 100px;
       z-index: 99;
      }  
 `;
@@ -63,7 +60,6 @@ const Hero = ()  => {
           name: item.node.title,
           image: (
             <Img
-              imgStyle={{height: "100%"}}
               loading='eager'
               fluid={sources}
             />
