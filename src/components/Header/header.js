@@ -35,7 +35,7 @@ const Header = () => {
           </h1>
           <div className={styles.menu}>
             {menu.map((el, index) => (
-              <a href={`/${el.item}`}>{el.item}</a>
+              <a href={`/${el.item === 'performance' ? '' : el.item }`}>{el.item}</a>
             ))}
           </div>
      </header>

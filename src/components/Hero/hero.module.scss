@@ -1,12 +1,9 @@
 @import '../../styles/utils';
 
 .sliderWrap {
-  padding: 7rem 20% 0 20%;
+  padding: 20vh 20% 0 20%;
 
   @include small {
     padding: 10rem 0;
   }
-}
-.paging {
-  overflow-y: hidden;
 }

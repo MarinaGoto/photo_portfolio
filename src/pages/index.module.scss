@@ -1,45 +1,30 @@
 @import '../styles/utils';
 
-.portrait {
-  padding: 150px;
-  @include small {
-    padding: 50px;
-  }
-}
-
-
-.perfImage {
-  @include medium {
-    padding: 100px 0;
-  }
-}
-
 
 .story {
-  padding-top: 300px;
+  padding-top: 30vh;
   max-width: 80%;
   margin: auto;
   display: flex;
   justify-content: space-between;
-  .item {
-    max-width: 45%;
-  }
-  img {
-    object-fit: contain;
-  }
-
 
   @include medium {
     flex-direction: column;
+  }
 
-    .item {
-      max-width: unset;
+  .content {
+    width: 100%;
+    padding: 5rem;
+
+    @include medium {
+      padding: 5rem 0;
     }
   }
+
 }
 
 .contact {
-  padding-top: 300px;
+  padding-top: 30vh;
   max-width: 80%;
   margin: auto;
   text-align: center;

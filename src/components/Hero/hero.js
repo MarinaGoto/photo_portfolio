@@ -34,7 +34,7 @@ const dataQuery = graphql`
           title
           image {
             childImageSharp {
-              fluid(maxWidth: 1000, quality: 90) {
+              fluid(maxWidth: 1000, quality: 90,  maxHeight: 800) {
                 ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
@@ -70,13 +70,11 @@ const Hero = ()  => {
     const settings = {
       customPaging: function(i) {
         return (
-          <div className={styles.paging}>
+          <div>
             {items[i].image}
           </div>
         );
       },
-      //autoplaySpeed: 2000,
-      //autoplay: true,
       dots: true,
       arrows: true,
       infinite: true,
