@@ -17,7 +17,7 @@ const query = graphql`
   }
 `
 
-const Story = ()  => {
+const About = ()  => {
   const data = useStaticQuery(query);
   return (
   <Layout>
@@ -34,4 +34,4 @@ const Story = ()  => {
   </Layout>
 )};
 
-export default Story
+export default About

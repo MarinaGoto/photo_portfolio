@@ -2,20 +2,16 @@ import { Link } from "gatsby"
 import React from 'react';
 import styles from "./header.module.scss"
 import logo from "../../images/logo.png";
-import { useWindowWidth } from '@react-hook/window-size';
 
 const menu = [
   {item: "performance"},
   {item: "portrait"},
-  {item: "story"},
+  {item: "about"},
   {item: "contact"},
 ];
 
 
 const Header = () => {
-  const windowWidth = useWindowWidth();
-  const isOnSmallerDevice = windowWidth <= 768;
-
   return (
      <header className={styles.header}>
           <h1 style={{ margin: 0 }}>
@@ -35,7 +31,7 @@ const Header = () => {
           </h1>
           <div className={styles.menu}>
             {menu.map((el, index) => (
-              <a href={`/${el.item === 'performance' ? '' : el.item }`}>{el.item}</a>
+              <a href={`/${el.item}`}>{el.item}</a>
             ))}
           </div>
      </header>

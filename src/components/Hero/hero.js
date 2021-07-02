@@ -6,6 +6,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from 'styled-components'
+import Layout from '../Layout/layout';
+import SEO from '../seo';
 
 const SliderWrap = styled.div`
     .slick-dots {
@@ -85,15 +87,21 @@ const Hero = ()  => {
     };
 
     return (
-          <SliderWrap className={styles.sliderWrap}>
-            <Slider {...settings}>
-              {items.map((el, index) => (
-                <div key={index}>
-                  {el.image}
-                </div>
-              ))}
-            </Slider>
-          </SliderWrap>
+      <Layout>
+        <SEO
+          title="samira shaterian"
+          description={"Samira is a photographer based in Oslo."}
+        />
+        <SliderWrap className={styles.sliderWrap}>
+          <Slider {...settings}>
+            {items.map((el, index) => (
+              <div key={index}>
+                {el.image}
+              </div>
+            ))}
+          </Slider>
+        </SliderWrap>
+      </Layout>
     );
 };
 
