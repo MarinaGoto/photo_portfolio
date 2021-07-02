@@ -17,7 +17,7 @@ const IndexPage = () => {
         description={"Samira is a photographer based in Oslo."}
       />
       {
-        isOnSmallerDevice ? <Portrait/> :  <Hero />
+        !isOnSmallerDevice ? <Hero/> :  <Portrait />
       }
     </Layout>
   )
