@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../Hero/hero.module.scss';
+import styles from './portrait.module.scss';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import Slider from "react-slick";
@@ -37,7 +37,7 @@ const dataPortraitQuery = graphql`
           title
           image {
             childImageSharp {
-              fluid(maxWidth: 600, quality: 90, maxHeight: 900) {
+              fluid(maxWidth: 400, quality: 90, maxHeight: 500) {
                 ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }

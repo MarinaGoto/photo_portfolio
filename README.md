@@ -12,3 +12,13 @@ Portfolio presenting work of a talented photographer Samira Shaterian.
 
 - Run: `yarn build` 
 
+#### Access the webpage
+
+[samirashaterian.com](http://samirashaterian.com)
+
+
+### How to add pictures? 
+1. Add a picture (jpg) in the `images` folder;
+2. Add the title and the path of the picture to the corresponding file in the `data` folder;
+3. Commit changes. 
+

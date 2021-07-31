@@ -1,0 +1,9 @@
+@import '../../styles/utils';
+
+.sliderWrap {
+  padding: 20vh 30% 0 30%;
+
+  @include small {
+    padding: 10rem 0;
+  }
+}
