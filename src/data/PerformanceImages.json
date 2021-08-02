@@ -4,21 +4,23 @@
     "image": "../images/performance/1.jpg"
   },
   {
-    "title": "Performance 2",
-    "image": "../images/performance/2.jpg"
+    "title": "Performance 5",
+    "image": "../images/performance/5.jpg"
   },
   {
     "title": "Performance 3",
     "image": "../images/performance/3.jpg"
   },
   {
+    "title": "Performance 2",
+    "image": "../images/performance/2.jpg"
+  },
+  
+  {
     "title": "Performance 4",
     "image": "../images/performance/4.jpg"
   },
-  {
-    "title": "Performance 5",
-    "image": "../images/performance/5.jpg"
-  },
+  
   {
     "title": "Performance 6",
     "image": "../images/performance/6.jpg"
