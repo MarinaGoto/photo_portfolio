@@ -36,7 +36,7 @@ const dataQuery = graphql`
           title
           image {
             childImageSharp {
-              fluid(maxWidth: 1000, quality: 90,  maxHeight: 800) {
+              fluid(maxWidth: 1280, quality: 90,  maxHeight: 768) {
                 ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
