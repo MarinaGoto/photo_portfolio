@@ -15,22 +15,21 @@
     "title": "Performance 2",
     "image": "../images/performance/2.jpg"
   },
-  
   {
     "title": "Performance 4",
     "image": "../images/performance/4.jpg"
   },
-  
   {
     "title": "Performance 6",
     "image": "../images/performance/6.jpg"
   },
   {
+  "title": "Performance 8",
+  "image": "../images/performance/8.jpg"
+  },
+  {
   "title": "Performance 12",
   "image": "../images/performance/12.jpg"
   },
-  {
-  "title": "Performance 8",
-  "image": "../images/performance/8.jpg"
-  }
+  
 ]
