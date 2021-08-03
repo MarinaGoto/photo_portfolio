@@ -8,10 +8,6 @@
     "image": "../images/portrait/2.jpg"
   },
   {
-    "title": "Performance 3",
-    "image": "../images/portrait/3.jpg"
-  },
-  {
     "title": "Performance 4",
     "image": "../images/portrait/4.jpg"
   },
@@ -23,8 +19,4 @@
     "title": "Performance 2",
     "image": "../images/portrait/6.jpg"
   },
-  {
-    "title": "Performance",
-    "image": "../images/portrait/7.jpg"
-  }
 ]
