@@ -1,34 +1,33 @@
-[
-  {
-    "title": "Performance 1",
-    "image": "../images/performance/1.jpg"
-  },
-  {
-    "title": "Performance 5",
-    "image": "../images/performance/5.jpg"
-  },
-  {
-    "title": "Performance 15",
-    "image": "../images/performance/15.jpg"
-  },
-  {
-    "title": "Performance 19",
-    "image": "../images/performance/19.jpg"
-  },
-  {
-    "title": "Performance 17",
-    "image": "../images/performance/17.jpg"
-  },
-  {
-    "title": "Performance 18",
-    "image": "../images/performance/18.jpg"
-  },
-  {
-  "title": "Performance 8",
-  "image": "../images/performance/8.jpg"
-  },
-  {
-  "title": "Performance 12",
-  "image": "../images/performance/12.jpg"
-  },
+[{
+		"title": "Performance 1",
+		"image": "../images/performance/1.jpg"
+	},
+	{
+		"title": "Performance 5",
+		"image": "../images/performance/5.jpg"
+	},
+	{
+		"title": "Performance 15",
+		"image": "../images/performance/15.jpg"
+	},
+	{
+		"title": "Performance 19",
+		"image": "../images/performance/19.jpg"
+	},
+	{
+		"title": "Performance 17",
+		"image": "../images/performance/17.jpg"
+	},
+	{
+		"title": "Performance 18",
+		"image": "../images/performance/18.jpg"
+	},
+	{
+		"title": "Performance 8",
+		"image": "../images/performance/8.jpg"
+	},
+	{
+		"title": "Performance 12",
+		"image": "../images/performance/12.jpg"
+	}
 ]
