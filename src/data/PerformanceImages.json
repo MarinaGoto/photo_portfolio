@@ -1,4 +1,4 @@
-[{
+[       {
 		"title": "Performance 1",
 		"image": "../images/performance/1.jpg"
 	},
@@ -22,7 +22,7 @@
 		"title": "Performance 18",
 		"image": "../images/performance/18.jpg"
 	},
- {
+        {
 		"title": "Performance 16",
 		"image": "../images/performance/16.jpg"
 	},
