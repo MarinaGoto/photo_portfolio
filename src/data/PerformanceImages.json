@@ -47,10 +47,16 @@
 		"image": "../images/performance/77.jpg"
 	
 	},
- {
+        {
 		"title": "Performance 100",
 		"image": "../images/performance/100.jpg"
 	
 	},
+  {
+		"title": "Performance 45",
+		"image": "../images/performance/45.jpg"
+	
+	},
+ 
  
 
