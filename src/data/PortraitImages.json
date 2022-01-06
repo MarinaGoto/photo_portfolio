@@ -3,21 +3,13 @@
 		"image": "../images/portrait/1.jpg"
 	},
 	{
-		"title": "Performance 2",
-		"image": "../images/portrait/2.jpg"
-	},
-	{
 		"title": "Performance 4",
 		"image": "../images/portrait/4.jpg"
 	},
 	{
-		"title": "Performance",
+		"title": "Performance 5",
 		"image": "../images/portrait/5.jpg"
 	},
-	{
-		"title": "Performance 2",
-		"image": "../images/portrait/6.jpg"
-	}
         {
 		"title": "Performance 12",
 		"image": "../images/portrait/12.jpg"
