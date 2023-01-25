@@ -4,8 +4,6 @@ import styles from "./header.module.scss"
 import logo from "../../images/logo.png";
 
 const menu = [
-  {item: "performance"},
-  {item: "portrait"},
   {item: "about"},
   {item: "contact"},
 ];
