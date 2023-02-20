@@ -14,7 +14,7 @@ Portfolio presenting work of a talented photographer Samira Shaterian.
 
 #### Access the webpage
 
-[samirashaterian.com](http://samirashaterian.com)
+[samirashaterian.netlify.app](https://samirashaterian.netlify.app/)
 
 
 ### How to add pictures? 
