@@ -3,10 +3,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Hero from "../components/Hero/hero"
 
-const PortraitPage = () => {
+const PerformancePage = () => {
   return (
     <Hero/>
   )
 };
 
-export default PortraitPage
+export default PerformancePage

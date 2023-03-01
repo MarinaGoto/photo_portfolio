@@ -28,7 +28,6 @@
     "gatsby-source-filesystem": "^2.2.5",
     "gatsby-transformer-json": "^3.7.0",
     "gatsby-transformer-sharp": "^3.5.0",
-    "node-sass": "^4.14.0",
     "normalize-scss": "^7.0.1",
     "nuka-carousel": "^4.7.7",
     "prop-types": "^15.7.2",
